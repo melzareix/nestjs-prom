@@ -10,7 +10,7 @@ export class PromController {
     res.end(client.register.metrics());
   }
 
-  public static forRoot(path: string) {
+  public static forRoot(path: string = 'metrics') {
     Reflect.defineMetadata(PATH_METADATA, path, PromController);
     return PromController;
   }
